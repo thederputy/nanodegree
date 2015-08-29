@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My App Portfolio</string>
 
-    <string name="my_title">My NanoDegree Apps!</string>
+    <string name="my_title">My Nanodegree Apps!</string>
     <string name="action_settings">Settings</string>
 
     <string name="button_popular_movies">POPULAR MOVIES</string>

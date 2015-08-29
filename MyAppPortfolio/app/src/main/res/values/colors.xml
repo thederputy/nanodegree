@@ -2,5 +2,6 @@
 <resources>
     <color name="udacity_orange">#F08C35</color>
     <color name="capstone_red">#CD0C3E</color>
-    <color name="light_gray">#D3D3D3</color>
+    <color name="light_gray">#FAFAFA</color>
+    <color name="background_gray">#CCCCCC</color>
 </resources>

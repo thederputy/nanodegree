@@ -6,22 +6,22 @@
     </style>
 
     <style name="MainButtonTheme">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingTop">20dp</item>
         <item name="android:paddingBottom">20dp</item>
-        <item name="android:paddingLeft">55dp</item>
-        <item name="android:paddingRight">55dp</item>
         <item name="android:clickable">true</item>
         <item name="android:enabled">true</item>
-        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
     <style name="MainButtonTheme.Orange">
+        <!-- todo: style the buttons with color using a field that works on API10 -->
         <item name="android:backgroundTint">@color/udacity_orange</item>
     </style>
 
     <style name="MainButtonTheme.Red">
+        <!-- todo: style the buttons with color using a field that works on API10 -->
         <item name="android:backgroundTint">@color/capstone_red</item>
     </style>
 

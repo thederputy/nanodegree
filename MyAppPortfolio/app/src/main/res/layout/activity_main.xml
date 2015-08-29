@@ -1,81 +1,65 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/background_gray"
+    android:weightSum="1">
 
-    <TextView android:text="@string/my_title" android:layout_width="wrap_content"
+    <TextView android:text="@string/my_title"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:id="@+id/subHeading"
-        android:typeface="monospace" />
+        android:typeface="monospace"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="wrap_content" />
 
-    <Button
-        android:text="@string/button_popular_movies"
-        android:id="@+id/buttonPopularMovies"
-        android:layout_marginTop="40dp"
-        android:onClick="buttonPopularMoviesOnClick"
-        android:layout_below="@+id/subHeading"
-        style="@style/MainButtonTheme.Orange" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp">
 
-    <Button
-        android:text="@string/button_scores"
-        android:id="@+id/buttonScores"
-        android:layout_below="@+id/buttonPopularMovies"
-        android:layout_alignLeft="@+id/buttonPopularMovies"
-        android:layout_alignStart="@+id/buttonPopularMovies"
-        android:layout_alignRight="@+id/buttonPopularMovies"
-        android:layout_alignEnd="@+id/buttonPopularMovies"
-        android:onClick="buttonScoresOnClick"
-        style="@style/MainButtonTheme.Orange" />
+        <Button
+            android:text="@string/button_popular_movies"
+            android:id="@+id/buttonPopularMovies"
+            android:onClick="buttonPopularMoviesOnClick"
+            style="@style/MainButtonTheme.Orange" />
 
-    <Button
-        android:text="@string/button_library"
-        android:id="@+id/buttonLibrary"
-        android:layout_below="@+id/buttonScores"
-        android:layout_alignLeft="@+id/buttonPopularMovies"
-        android:layout_alignStart="@+id/buttonPopularMovies"
-        android:layout_alignRight="@+id/buttonPopularMovies"
-        android:layout_alignEnd="@+id/buttonPopularMovies"
-        android:onClick="buttonLibraryOnClick"
-        style="@style/MainButtonTheme.Orange" />
+        <Button
+            android:text="@string/button_scores"
+            android:id="@+id/buttonScores"
+            android:onClick="buttonScoresOnClick"
+            style="@style/MainButtonTheme.Orange" />
 
-    <Button
-        android:text="@string/button_build"
-        android:id="@+id/buttonBuild"
-        android:layout_below="@+id/buttonLibrary"
-        android:layout_alignLeft="@+id/buttonPopularMovies"
-        android:layout_alignStart="@+id/buttonPopularMovies"
-        android:layout_alignRight="@+id/buttonPopularMovies"
-        android:layout_alignEnd="@+id/buttonPopularMovies"
-        android:onClick="buttonBuildOnClick"
-        style="@style/MainButtonTheme.Orange" />
+        <Button
+            android:text="@string/button_library"
+            android:id="@+id/buttonLibrary"
+            android:onClick="buttonLibraryOnClick"
+            style="@style/MainButtonTheme.Orange" />
 
-    <Button
-        android:text="@string/button_reader"
-        android:id="@+id/buttonReader"
-        android:layout_below="@+id/buttonBuild"
-        android:layout_alignLeft="@+id/buttonPopularMovies"
-        android:layout_alignStart="@+id/buttonPopularMovies"
-        android:layout_alignRight="@+id/buttonPopularMovies"
-        android:layout_alignEnd="@+id/buttonPopularMovies"
-        android:onClick="buttonReaderOnClick"
-        style="@style/MainButtonTheme.Orange" />
+        <Button
+            android:text="@string/button_build"
+            android:id="@+id/buttonBuild"
+            android:onClick="buttonBuildOnClick"
+            style="@style/MainButtonTheme.Orange" />
 
-    <Button
-        android:text="@string/button_capstone"
-        android:id="@+id/buttonCapstone"
-        android:layout_below="@+id/buttonReader"
-        android:layout_alignRight="@+id/buttonPopularMovies"
-        android:layout_alignEnd="@+id/buttonPopularMovies"
-        android:layout_alignLeft="@+id/buttonPopularMovies"
-        android:layout_alignStart="@+id/buttonPopularMovies"
-        android:maxLines="1"
-        android:onClick="buttonCapstoneOnClick"
-        android:textColor="@color/light_gray"
-        style="@style/MainButtonTheme.Red" />
+        <Button
+            android:text="@string/button_reader"
+            android:id="@+id/buttonReader"
+            android:onClick="buttonReaderOnClick"
+            style="@style/MainButtonTheme.Orange" />
 
-</RelativeLayout>
+        <Button
+            android:text="@string/button_capstone"
+            android:id="@+id/buttonCapstone"
+            android:onClick="buttonCapstoneOnClick"
+            android:textColor="@color/light_gray"
+            style="@style/MainButtonTheme.Red" />
+    </LinearLayout>
+
+</LinearLayout>
