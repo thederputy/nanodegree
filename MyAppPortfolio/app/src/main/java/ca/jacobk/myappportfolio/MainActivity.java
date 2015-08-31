@@ -39,33 +39,32 @@ public class MainActivity extends AppCompatActivity {
 //        return super.onOptionsItemSelected(item);
 //    }
 
-    public void buttonPopularMoviesOnClick(View v) {
+    private void showToastForString(int string_id) {
         Resources res = getResources();
-        Toast.makeText(this, String.format(res.getString(R.string.toast_format), getString(R.string.toast_popular_movies)), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, String.format(res.getString(R.string.toast_format), getString(string_id)), Toast.LENGTH_SHORT).show();
+    }
+
+    public void buttonPopularMoviesOnClick(View v) {
+        showToastForString(R.string.toast_popular_movies);
     }
 
     public void buttonScoresOnClick(View v) {
-        Resources res = getResources();
-        Toast.makeText(this, String.format(res.getString(R.string.toast_format), getString(R.string.toast_scores)), Toast.LENGTH_SHORT).show();
+        showToastForString(R.string.toast_scores);
     }
 
     public void buttonLibraryOnClick(View v) {
-        Resources res = getResources();
-        Toast.makeText(this, String.format(res.getString(R.string.toast_format), getString(R.string.toast_library)), Toast.LENGTH_SHORT).show();
+        showToastForString(R.string.toast_library);
     }
 
     public void buttonBuildOnClick(View v) {
-        Resources res = getResources();
-        Toast.makeText(this, String.format(res.getString(R.string.toast_format), getString(R.string.toast_build)), Toast.LENGTH_SHORT).show();
+        showToastForString(R.string.toast_build);
     }
 
     public void buttonReaderOnClick(View v) {
-        Resources res = getResources();
-        Toast.makeText(this, String.format(res.getString(R.string.toast_format), getString(R.string.toast_reader)), Toast.LENGTH_SHORT).show();
+        showToastForString(R.string.toast_reader);
     }
 
     public void buttonCapstoneOnClick(View v) {
-        Resources res = getResources();
-        Toast.makeText(this, String.format(res.getString(R.string.toast_format), getString(R.string.toast_capstone)), Toast.LENGTH_SHORT).show();
+        showToastForString(R.string.toast_capstone);
     }
 }
