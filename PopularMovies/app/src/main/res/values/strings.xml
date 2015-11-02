@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">Detail</string>
+
+    <string name="tmdb_discover_base_url">http://api.themoviedb.org/3/discover/movie?</string>
+    <string name="tmdb_param_api_key">api_key</string>
+    <string name="tmdb_param_sort_by">sort_by</string>
+    <string name="tmdb_param_sort_by_popularity.desc">popularity.desc</string> <!-- Most Popular -->
+    <string name="tmdb_param_sort_by_vote_average.desc">vote_average.desc</string> <!-- Highest Rated -->
+    <string name="tmdb_param_sort_by_original_title.asc">original_title.asc</string> <!-- Title: A-Z -->
+
+    <string name="tmdb_image_base_url">http://image.tmdb.org/t/p/</string>
+    <string name="tmdb_image_w185">x185</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_title_sort_movies_by">Sort Movies By</string>
+    <string name="pref_key_sort" translatable="false">key_sort</string>
+    <string-array name="pref_sort_movies_titles">
+        <item>Most Popular</item>
+        <item>Highest Rated</item>
+        <item>Title</item>
+    </string-array>
+    <string-array name="pref_sort_movies_values">
+        <item>@string/tmdb_param_sort_by_popularity.desc</item>
+        <item>@string/tmdb_param_sort_by_vote_average.desc</item>
+        <item>@string/tmdb_param_sort_by_original_title.asc</item>
+    </string-array>
+
+</resources>
