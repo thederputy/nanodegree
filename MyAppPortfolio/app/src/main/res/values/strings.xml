@@ -18,4 +18,6 @@
     <string name="toast_build">Build</string>
     <string name="toast_reader">Reader</string>
     <string name="toast_capstone">Capstone</string>
+
+    <string name="pkg.popular_movies">ca.jacobk.popularmovies</string>
 </resources>

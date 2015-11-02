@@ -1,10 +1,8 @@
 package ca.jacobk.myappportfolio;
 
-import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -39,13 +37,23 @@ public class MainActivity extends AppCompatActivity {
 //        return super.onOptionsItemSelected(item);
 //    }
 
-    private void showToastForString(int string_id) {
-        Resources res = getResources();
-        Toast.makeText(this, String.format(res.getString(R.string.toast_format), getString(string_id)), Toast.LENGTH_SHORT).show();
+    private void showToastForString(int stringId) {
+        Toast.makeText(this, String.format(getString(R.string.toast_format), getString(stringId)), Toast.LENGTH_SHORT).show();
+    }
+
+    private void startActivityForPackage(int packageId, int toast)
+    {
+        Intent intent = getPackageManager().getLaunchIntentForPackage(getString(packageId));
+        if (intent != null) {
+            intent.addCategory(Intent.CATEGORY_LAUNCHER);
+            startActivity(intent);
+        } else {
+            showToastForString(toast);
+        }
     }
 
     public void buttonPopularMoviesOnClick(View v) {
-        showToastForString(R.string.toast_popular_movies);
+        startActivityForPackage(R.string.pkg_popular_movies, R.string.toast_popular_movies);
     }
 
     public void buttonScoresOnClick(View v) {
