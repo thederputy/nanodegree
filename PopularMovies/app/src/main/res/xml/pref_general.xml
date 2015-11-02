@@ -1,0 +1,12 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:title="@string/pref_title_sort_movies_by"
+        android:key="@string/pref_key_sort"
+        android:defaultValue="@string/tmdb_param_sort_by_popularity.desc"
+        android:entries="@array/pref_sort_movies_titles"
+        android:entryValues="@array/pref_sort_movies_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:persistent="true"/>
+
+</PreferenceScreen>
